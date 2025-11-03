@@ -17,9 +17,9 @@ COPY app.py .
 EXPOSE 5000
 
 # Create a non-root user for security
-RUN adduser --disabled-password --gecos '' rchandran && \
-    chown -R rchandran:rchandran /app
-USER rchandran
+RUN adduser --disabled-password --gecos '' dmaheta && \
+    chown -R dmaheta:dmaheta /app
+USER dmaheta
 
 # Command to run the application
 CMD ["python", "app.py"]
